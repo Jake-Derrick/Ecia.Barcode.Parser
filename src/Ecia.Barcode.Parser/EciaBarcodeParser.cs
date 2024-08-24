@@ -52,7 +52,7 @@ public partial class EciaBarcodeParser : IEciaBarcodeParser
 
         ValidateField(nameof(parsedBarcode.CustomerPo), parsedBarcode.CustomerPo, 25, labelFormat is LabelFormat.Logistic or LabelFormat.PackingSlip, result.Errors);
         ValidateField(nameof(parsedBarcode.PackageIdIntermediateLabel), parsedBarcode.PackageIdIntermediateLabel, 25, false, result.Errors);
-        ValidateField(nameof(parsedBarcode.PackageIdLogisticLabel), parsedBarcode.PackageIdIntermediateLabel, 25, labelFormat is LabelFormat.Logistic, result.Errors);
+        ValidateField(nameof(parsedBarcode.PackageIdLogisticLabel), parsedBarcode.PackageIdLogisticLabel, 25, labelFormat is LabelFormat.Logistic, result.Errors);
         ValidateField(nameof(parsedBarcode.PackingListNumber), parsedBarcode.PackingListNumber, 25, labelFormat is LabelFormat.PackingSlip, result.Errors);
         ValidateField(nameof(parsedBarcode.ShipDate), parsedBarcode.ShipDate, 8, false, result.Errors, ShipDateRegex());
         ValidateField(nameof(parsedBarcode.CustomerPartNumber), parsedBarcode.CustomerPartNumber, 40, false, result.Errors);
