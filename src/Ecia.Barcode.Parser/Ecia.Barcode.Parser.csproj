@@ -27,6 +27,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\..\icon.png" PackagePath="\" Pack="true" />
+    <None Include="..\..\README.md" PackagePath="\" Pack="true"/>
   </ItemGroup>
 </Project>

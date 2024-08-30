@@ -22,7 +22,7 @@ jobs:
           version="${GITHUB_REF_NAME#v}"
           echo "version-without-v=$version" >> $GITHUB_OUTPUT
       - name: Pack
-        run: dotnet pack ./Ecia.Barcode.Parser.sln -c Release -p:PackageVersion=${{ steps.get_version.outputs.version-without-v }}
+        run: dotnet pack src/Ecia.Barcode.Parser/Ecia.Barcode.Parser.csproj -c Release -p:PackageVersion=${{ steps.get_version.outputs.version-without-v }}
       - name: Push
         run: dotnet nuget push src/Ecia.Barcode.Parser/bin/Release/Ecia.Barcode.Parser.${{ steps.get_version.outputs.version-without-v }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         env:
