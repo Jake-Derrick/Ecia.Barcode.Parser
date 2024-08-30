@@ -4,6 +4,26 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    
+    <!-- NuGet -->
+    <Authors>Jake-Derrick</Authors>
+    <Copyright>Copyright © Jake-Derrick and contributors</Copyright>
+    <IsPackable>True</IsPackable>
+    <PackageProjectUrl>https://github.com/Jake-Derrick/Ecia.Barcode.Parser</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Jake-Derrick/Ecia.Barcode.Parser</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>ecia;barcode-parser</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Title>ECIA Barcode Parser</Title>
+    <Description>Parses ECIA barcode strings</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <DebugType>portable</DebugType>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
 </Project>
