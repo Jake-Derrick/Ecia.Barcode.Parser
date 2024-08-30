@@ -5,13 +5,15 @@ VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecia.Barcode.Parser", "src\Ecia.Barcode.Parser\Ecia.Barcode.Parser.csproj", "{2066B889-354E-429D-AF1C-F387D3772FB1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4DABE525-9184-4BDD-9433-E5951A3B1A4B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4A2C7E56-2F8B-4E1C-87CD-C9BD6B94E478}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{85A800CF-61DA-44CC-9BA1-160847B2EF4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecia.Barcode.Parser.UnitTests", "tests\Ecia.Barcode.Parser.UnitTests\Ecia.Barcode.Parser.UnitTests.csproj", "{F4259606-999C-4A98-B0E5-0B3D321D8844}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecia.Barcode.Parser.UnitTests", "tests\Ecia.Barcode.Parser.UnitTests\Ecia.Barcode.Parser.UnitTests.csproj", "{F4259606-999C-4A98-B0E5-0B3D321D8844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecia.Barcode.Parser.Sample", "sample\Ecia.Barcode.Parser.Sample\Ecia.Barcode.Parser.Sample.csproj", "{70F0E232-2E30-471A-80FC-E6CAD2D645AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{7AAAC4F7-0BC9-40F9-A89A-A40AD7AE9B0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F4259606-999C-4A98-B0E5-0B3D321D8844}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4259606-999C-4A98-B0E5-0B3D321D8844}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4259606-999C-4A98-B0E5-0B3D321D8844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70F0E232-2E30-471A-80FC-E6CAD2D645AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70F0E232-2E30-471A-80FC-E6CAD2D645AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70F0E232-2E30-471A-80FC-E6CAD2D645AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70F0E232-2E30-471A-80FC-E6CAD2D645AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2066B889-354E-429D-AF1C-F387D3772FB1} = {4A2C7E56-2F8B-4E1C-87CD-C9BD6B94E478}
 		{F4259606-999C-4A98-B0E5-0B3D321D8844} = {85A800CF-61DA-44CC-9BA1-160847B2EF4C}
+		{70F0E232-2E30-471A-80FC-E6CAD2D645AF} = {7AAAC4F7-0BC9-40F9-A89A-A40AD7AE9B0B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {056759EB-2054-49E4-BB64-5DA3DDACC698}
