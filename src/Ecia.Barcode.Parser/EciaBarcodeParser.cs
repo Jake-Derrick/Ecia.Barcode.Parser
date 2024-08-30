@@ -12,13 +12,13 @@ public partial class EciaBarcodeParser : IEciaBarcodeParser
     {
         ArgumentNullException.ThrowIfNull(barcodeString);
         var parsedBarcode = new ParsedBarcode();
-        if (barcodeString.StartsWith(SpecialCharacters.Header))
+        if (barcodeString.StartsWith(SpecialCharacters.Header, StringComparison.Ordinal))
         {
             parsedBarcode.CompliantHeader = true;
             barcodeString = barcodeString[SpecialCharacters.Header.Length..];
         }
 
-        if (barcodeString.EndsWith(SpecialCharacters.Trailer))
+        if (barcodeString.EndsWith(SpecialCharacters.Trailer, StringComparison.Ordinal))
         {
             parsedBarcode.CompliantTrailer = true;
             barcodeString = barcodeString[..^SpecialCharacters.Trailer.Length];
@@ -40,14 +40,14 @@ public partial class EciaBarcodeParser : IEciaBarcodeParser
     }
 
     /// <inheritdoc />
-    public ValidationResult ValidateParsedBarcodeCompliance(ParsedBarcode parsedBarcode, LabelFormat labelFormat)
+    public ValidationResult ValidateParsedBarcodeCompliance(ParsedBarcode parsedBarcode, LabelFormat labelFormat = LabelFormat.Unknown)
     {
         var result = new ValidationResult();
 
-        if (parsedBarcode.CompliantHeader)
+        if (!parsedBarcode.CompliantHeader)
             result.Errors.Add(nameof(parsedBarcode.CompliantHeader), "The barcode header is not compliant.");
 
-        if (parsedBarcode.CompliantTrailer)
+        if (!parsedBarcode.CompliantTrailer)
             result.Errors.Add(nameof(parsedBarcode.CompliantTrailer), "The barcode trailer is not compliant.");
 
         ValidateField(nameof(parsedBarcode.CustomerPo), parsedBarcode.CustomerPo, 25, labelFormat is LabelFormat.Logistic or LabelFormat.PackingSlip, result.Errors);
@@ -80,6 +80,9 @@ public partial class EciaBarcodeParser : IEciaBarcodeParser
             errors.Add(fieldName, "Field is required.");
             return;
         }
+
+        if (string.IsNullOrEmpty(value))
+            return;
 
         if (value?.Length > maxLength)
         {

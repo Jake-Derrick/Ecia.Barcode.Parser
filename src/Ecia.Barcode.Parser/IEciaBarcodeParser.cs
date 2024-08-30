@@ -1,5 +1,8 @@
 ﻿namespace Ecia.Barcode.Parser;
 
+/// <summary>
+/// Interface for parsing and validating ECIA barcodes.
+/// </summary>
 public interface IEciaBarcodeParser
 {
     /// <summary>
